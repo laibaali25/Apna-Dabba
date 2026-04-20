@@ -1,125 +1,138 @@
-html {
-  height: 100%;
-  width: 100%;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+/* BODY */
 body {
-  /* solid background */
-  background: rgb(151, 109, 109);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden;
 
-  /* gradient background*/
-  background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);    
-
-  /* photo background */
-  background-image: url('tiffinPhotoBG.jpg');
-  background-size: cover;
-  background-position: center;  
- 
-
-  display: flex;
-  align-items: center;
-  justify-content: center;    
-  height: 100vh;  
+  /* SAME THEME IMAGE */
+  background: url("tiffinPhotoBG.jpg") center/cover no-repeat;
 }
 
+/* OVERLAY (WARM TONE) */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255, 90, 95, 0.65),
+    rgba(255, 153, 102, 0.65)
+  );
+  z-index: 0;
+}
+
+/* MAIN LAYOUT */
 .container {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.25);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);  
-  padding: 20px;  
-  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT IMAGE */
+.side-image {
+  flex: 1;
+  background: url("tiffinPhotoBG.jpg") center/cover no-repeat;
+  filter: brightness(0.8);
+}
+
+/* CARD SIDE */
+.card {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content:center;
-  text-align: center;
-  width:550px;
-  height: 500px;
+  justify-content: center;
+  padding: 60px;
+
+  /* MATCH MAIN PAGE STYLE */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+
+  color: white;
 }
 
-.wrapper {
-  width: 100%;
-  height: 100%;
-
+/* LOGO */
+.logo {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-.banner-image {
-  background-image: url("APNA\ DABBA\ logo\ smal.png");
-  background-position: center;
-  background-size: cover;
-  height: 300px;
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255, 0.255)
-}
-
-h1{
-  font-family: 'Righteous', sans-serif;
-  color: rgba(255,255,255,0.98);
-  text-transform: uppercase;
-  font-size: 2.4rem;
+/* TEXT */
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 p {
+  font-size: 19px;
   color: #fff;
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-  font-size: 0.8rem;
-  line-height: 150%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 30px;
 }
 
-.button-wrapper{
-  margin-top: 18px;
+/* BUTTON WRAPPER */
+.button-wrapper {
+  display: flex;
+  gap: 20px;
 }
 
+/* BUTTON BASE */
 .btn {
-  border: none;
+  display: inline-block;
   padding: 12px 24px;
-  border-radius: 24px;
-  font-size: 12px;
-  font-size: 0.8rem;  
-  letter-spacing: 2px;  
+  border-radius: 999px; /* smooth pill shape */
+  border: none;
   cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  background: #ff5a5f;
+  color: white;
+
+  transition: all 0.3s ease;
 }
 
-.btn + .btn {
-  margin-left: 10px;
+/* HOVER */
+.btn:hover {
+  transform: translateY(-3px);
+  background: #e0484d;
+  box-shadow: 0 8px 20px rgba(255, 90, 95, 0.35);
 }
 
-.outline {
-  background: transparent;
-  color: #c63f3f;
-  border: 1px solid #c63f3f;
-  transition: all .3s ease;
-
+/* CLICK */
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.outline:hover{
-  transform: scale(1.125);
-  color: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.9);
-  transition: all .3s ease;  
-}
 
-.fill {
-  background: #c63f3f;
-  color: rgba(255,255,255,0.95);
-  filter: drop-shadow(0);
-  font-weight: bold;
-  transition: all .3s ease; 
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 
-.fill:hover{
-  transform: scale(1.125);  
-  border-color: rgba(255, 255, 255, 0.9);
-  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
-  transition: all .3s ease;    
-}
+  .side-image {
+    height: 30vh;
+  }
 
+  .card {
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .button-wrapper {
+    justify-content: center;
+  }
+} 
