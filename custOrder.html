@@ -1,228 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Tiffin Service Order Page</title>
-  <link rel="stylesheet" type="text/css" href="custOrder.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Orders - Apna Dabba</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="custOrder.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand">APNA DABBA</a>
 
-  <!--Nav bar -->
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">☰</button>
 
-  <nav class="navbar navbar-expand-lg " style="background-color: #d78d8d7a;">
-
-    <div class="container-fluid">
-      <a class="navbar-brand" style="font-weight: 800;">APNA DABBA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="custMain.html">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="custSubs.html">Subscriptions</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="custOrder.html">Orders</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="choose.html">Login</a>
-          </li>
-
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="custMain.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="custSubs.html">Subscriptions</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="choose.html">Login</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!----Nav bar end --->
+<!-- HERO HEADER -->
+<section class="orders-hero">
+  <h1>Your Orders</h1>
+  <p>Track and manage your tiffin subscriptions</p>
+</section>
 
+<!-- ORDERS -->
+<section class="orders-section">
 
+  <div class="orders-card">
 
-  <!--  Content example-->
-
-
-
-
-
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-    rel="stylesheet">
-  <!-- Fonts referenced in mdbootstrap, moved up to reduce page load time -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/mdb.min.css?version=0707050300507050503"
-    type='text/css' />
-  <link rel="stylesheet"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/storefront.css?version=0707050300507050503"
-    type='text/css' />
-  <link rel="stylesheet"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/autocomplete.css?version=0707050300507050503" />
-  <link rel="stylesheet" type="text/css" href="../css/ps/theme.css?version=0707050300507050503">
-
-
-  <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-
-  <link href="//cdn.datatables.net/plug-ins/1.10.19/integration/font-awesome/dataTables.fontAwesome.css"
-    rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/orderhistory.css?version=0707050300507050503" />
-
-  <div class="table-responsive pb-5">
-
-
-    <div id="headOrd">
-      <h1>Order Details</h1>
+    <div class="orders-header">
+      <h2>Order History</h2>
     </div>
 
-    <table id="tbOrderHistory" class="table border ps-table w-100 mb-3">
-      <thead>
-        <tr>
+    <div class="table-responsive">
+      <table id="tbOrderHistory" class="table modern-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Center Name</th>
+            <th>Charges</th>
+            <th>Status</th>
+          </tr>
+        </thead>
 
-          <th class="font-weight-bold py-2 border-0 quantity">Id</th>
-          <th class="font-weight-bold py-2 border-0 ">from</th>
-          <th class="font-weight-bold py-2 border-0 ">to</th>
+        <tbody>
+          <!-- Your JS data will load here -->
+        </tbody>
 
-          <th class="font-weight-bold py-2 border-0 ">Center name</th>
-          <th class="font-weight-bold py-2 border-0 ">Tiffin Charges</th>
-          <th class="font-weight-bold py-2 border-0 ">Status</th>
+      </table>
+    </div>
 
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
   </div>
 
+</section>
 
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
 
-
-  <!----------------------- Footer  ----------------------------------->
-  <footer class="footer-distributed">
-
-    <div class="footer-left">
-
-      <h3>
-        <img src="APNA DABBA logo smal.png" alt="Company Logo" width="130px">
-      </h3>
-
-      <p class="footer-links">
-        <a href="index.html" class="link-1">Home</a>
-
-        <a href="#">Blog</a>
-
-
-        <a href="#">About</a>
-
-
-
-        <a href="#">Contact</a>
-      </p>
-
-      <p class="footer-company-name">Apna Dabba © 2024</p>
+    <div class="footer-col">
+      <h4>Apna Dabba</h4>
+      <p>Fresh homemade meals delivered daily.</p>
     </div>
 
-    <div class="footer-center">
-
-      <div class="footer-icons">
-
-        <a class="fb" href="#"><i class="fa fa-facebook"> </i></a>
-        <a class="twit" href="#"><i class="fa fa-twitter"></i></a>
-        <a class="ld" href="#"> <i class="fa fa-linkedin"> </i></a>
-        <a class="git" href="#"><i class="fa fa-github"></i></a>
-
-      </div>
-
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:support@company.com">support@apnadabba.com</a></p>
-      </div>
-
+    <div class="footer-col">
+      <h4>Links</h4>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </div>
 
-
-    <div class="footer-right">
-
-      <p class="footer-company-about">
-        <span>About the company</span>
-
-        Apna Dabba is an innovative website serving as a centralized hub for tiffin services, fostering
-        seamless connections between discerning customers and local vendors.
-      </p>
-
-
-
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>support@apnadabba.com</p>
     </div>
 
-  </footer>
-
-  <!----------------------- Footer Ends ----------------------------------->
-
-  <!--
-
-<div class="content">
-
-  <h1 id="ordHead">Order History</h1>
-
-  <h2>Present Order Detail</h2>
-  <div class="order-card">
-    <h3>Present Tiffin</h3>
-    <p>Details of the tiffin you are currently using will be displayed here.</p>
   </div>
+</footer>
 
-  <h2>Past Orders</h2>
-  <div class="order-card">
-    <h3>Order #1</h3>
-    <p>Details of the tiffin you had in the past will be displayed here.</p>
-  </div>
-
-  <div class="order-card">
-    <h3>Order #2</h3>
-    <p>Details of another past order will be displayed here.</p>
-  </div>
-  
-</div>
-  
--->
-
-
-
-  <!-- Add more order cards for past orders if needed -->
-
-  <script src="custOrder.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<script src="custOrder.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

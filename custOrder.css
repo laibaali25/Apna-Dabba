@@ -1,362 +1,138 @@
-body,html{
+/* RESET */
+* {
   margin: 0;
-  background-color:#f7ececf4 ;
-  font-family: poppins;
-  height: 900px;
-  width: 100%;
-}
-
-
-
-h1 {
-  text-align: center;
-  color: #000000;
- margin: 0;
-}
-
-h2 {
-  margin-top: 30px;
-  color: #555;
-}
-
-.order-card {
-
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color:#7f210e95;
-  font-family: poppins;
-
-}
-
-.order-card h3 {
-  color: #222;
-}
-
-.order-card p {
-  color: #666;
-  font-style: normal;
-}
-
-.content{
-  background-color:#e7bebefd ; 
-}
-
-
-#navb{
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
-
-}
-
-
-
-
-
-
-/*content*/
-
-
-/* SHOW SORTABLE ICON ON HOVER OF TH */
-table.dataTable thead th.sorting:hover:after {
-  opacity: 1;
-  transform: translate(0);
-}
-
-/* OVERRIDES FOR SORT ICON FROM DATABLES */
-table.dataTable thead th.sorting:after,
-table.dataTable thead th.sorting_asc:after,
-table.dataTable thead th.sorting_desc:after {
-  font-family: FontAwesome;
-  position: relative !important;
-  display: inline-block !important;
-  font-size: 14px !important;
-  top: unset !important;
-  right: unset !important;
-  content: "\f062" !important;
-  transform-origin: center center;
-  transition: 200ms ease-out;
-  padding-top: 0 !important;
-}
-
-/* DEFAULT SORT ICON COLOR AND PLACEMENT */
-table.dataTable thead th.sorting:after {
-  transform: translateY(5px);
-  opacity: 0;
-  color: #b0bec5 !important;
-}
-
-table.dataTable thead th.sorting:after,
-table.dataTable thead th.sorting_asc:after,
-table.dataTable thead th.sorting_desc:after {
-  margin-left: 10px;
-}
-
-table.dataTable thead th.sorting_asc:after,
-table.dataTable thead th.sorting_desc:after {
-  color: #4285f4;
-}
-
-/* SORTING DESC ICON ANIMATION */
-table.dataTable thead th.sorting_desc:after {
-  transform: rotate(180deg);
-}
-
-/* REMOVING STYLES FROM ORDEROPTIONS.CSS THAT WE CAN REMOVE */
-table.dataTable thead th.sorting_desc:before,
-table.dataTable thead th.sorting_asc:before {
-  display: none;
-}
-
-
-.pb-5{
-  background-color: #eddcd98a;
-  padding: 50px;
-  height: 100%;
-}
-
-#headOrd{
-
-  height: 60px;
-  width: 60%;
-  justify-content: center;
-  margin: auto;
-  text-decoration: underline;
-  color: rgb(115, 84, 84);
-}
-
-#headOrd h1{
-  margin: 0;
-}
-
-
-
-/* Footer and main content */
-/*
-section {
-  width: 100%;
-  display: inline-block;
-   background-position: center center;
-  background-image: url('tiffinPhotoBG.jpg');
-
-  background-size: cover;
-  background-attachment: fixed !important;
-  background-repeat: no-repeat;
-  height: 80vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-
-}
-
-*/
-.footer-distributed{
-  background: rgb(151, 109, 109);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left{
-  width: 40%;
-
-}
-
-/* The company logo */
-
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px 'Open Sans', cursive;
-  margin: 0;
-}
-
-.footer-distributed h3 span{
-  color:  lightseagreen;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links{
-  color:  #ffffff;
-  margin: 20px 0 12px;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.footer-distributed .footer-links a{
-  display:inline-block;
-  line-height: 1.8;
-  font-weight:400;
-  text-decoration: none;
-  color:  inherit;
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
 }
 
-.footer-distributed .footer-company-name{
-  color:  #222;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
+/* NAVBAR */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* Footer Center */
-
-.footer-distributed .footer-center{
-  width: 35%;
+.navbar-brand {
+  font-weight: 700;
+  color: #ff5a5f !important;
 }
 
-.footer-distributed .footer-center i{
-  background-color:  #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+.nav-link {
+  color: #333 !important;
+}
+
+/* HERO */
+.orders-hero {
+  background: linear-gradient(135deg, #ff5a5f, #ff9966);
+  color: white;
   text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
+  padding: 40px 20px;
 }
 
-.footer-distributed .footer-center i.fa-envelope{
-  font-size: 17px;
-  line-height: 38px;
+.orders-hero h1 {
+  font-size: 36px;
 }
 
-.footer-distributed .footer-center p{
-  display: inline-block;
-  color: #ffffff;
-  font-weight:400;
-  vertical-align: middle;
-  margin:0;
+.orders-hero p {
+  opacity: 0.9;
 }
 
-.footer-distributed .footer-center p span{
-  display:block;
-  font-weight: normal;
-  font-size:14px;
-  line-height:2;
+/* SECTION */
+.orders-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-distributed .footer-center p a{
-  color:  #13137c;
-  text-decoration: none;;
+/* CARD */
+.orders-card {
+  width: 95%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed .footer-right{
-  width: 20%;
-}
-
-.footer-distributed .footer-company-about{
-  line-height: 20px;
-  color:  #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-  display: block;
-  color:  #ffffff;
-  font-size: 14px;
-  font-weight: bold;
+/* HEADER */
+.orders-header {
   margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons{
-  margin-top: 25px;
-  margin-left: 30px;
+/* TABLE */
+.modern-table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.footer-distributed .footer-icons a{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-
-
-  border-radius: 2px;
-  background-color: transparent;
-
-
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-
-  margin-right: 3px;
-  margin-bottom: 5px;
+/* HEADER ROW */
+.modern-table thead {
+  background: linear-gradient(135deg, #ff5a5f, #ff9966);
+  color: white;
 }
 
-
-.ld{
-  background-image:  url("linkdinNew.png");
-  background-size: cover;
+.modern-table th {
+  padding: 12px;
 }
 
-.git{
-  background-image:  url("github-logo (1).png");
-  background-size: cover;
+/* BODY */
+.modern-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
 }
 
-.twit{
-  background-image:  url("twitterLogo.png");
-  background-size: cover;
+/* HOVER */
+.modern-table tbody tr:hover {
+  background: #f9f9f9;
 }
 
-.fb{
-  background-image:  url("logof.png");
-  background-size: cover;
+/* STATUS */
+.modern-table td:last-child {
+  font-weight: 500;
+  color: #ff5a5f;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
+/* FOOTER */
+.footer {
+  background: #111827;
+  color: #ccc;
+  padding: 30px;
+  margin-top: 40px;
+}
 
-@media (max-width: 880px) {
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+}
 
-  .footer-distributed{
-    font: bold 14px sans-serif;
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col a {
+  color: #aaa;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
   }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right{
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed .footer-center i{
-    margin-left: 0;
-  }
-
-}
-
-.navbar-brand ,.nav-link{
-  color: black;
 }
