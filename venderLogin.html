@@ -1,34 +1,51 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-       <link rel="stylesheet" href="venderLogin.css"/>
-    </head>
-    <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class = "card">
-            <div class="username">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="custlogin.css">
 
-                <h1>Login</h1>
-                <input type="text" placeholder="Mobile/Email"/>
+  <title>Login</title>
+</head>
 
-            </div>
-            <div class="password">
-                <input type="password" placeholder="Password"/>
-            </div>
-            <div class="forgot"> Forgot Password</div>
-            <div class="btn">
+<body>
 
-              <a href="vendMain.html">
-                <button class="login-btn">Login</button>
-              </a>
-                
-            </div>
-            <div class="sign-up">Vendor 
-              <span> <a href="vendSignUp.html">
-                 Sign Up
-              </a> </span>
+  <div class="container">
+
+    <!-- LEFT SIDE IMAGE -->
+    <div class="image-section">
+      <div class="overlay-text">
+        <h1>Apna Dabba</h1>
+        <p>Fresh meals delivered to your doorstep</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="form-section">
+
+      <div class="card">
+        <h2>Welcome Back 👋</h2>
+
+        <input type="text" placeholder="Mobile / Email">
+        <input type="password" placeholder="Password">
+
+        <div class="forgot">Forgot Password?</div>
+
+        <a href="vendMain.html">
+          <button class="btn">Login</button>
+        </a>
+
+        <div class="sign-up">
+          Vendor? <a href="vendSignUp.html">Create account</a>
         </div>
+      </div>
 
-    </body>
+    </div>
+
+  </div>
+
+</body>
 </html>
