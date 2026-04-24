@@ -9,6 +9,28 @@
   <link rel="stylesheet" href="custlogin.css">
 
   <title>Login</title>
+
+  <script defer>
+    console.log("JS Loaded");
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("custLoginButton").onclick = function () {
+        console.log("Login clicked");
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Simple validation
+        if (username === "" || password === "") {
+          alert("Please fill in all fields");
+          return;
+        }
+
+        // Redirect with username
+        window.location.href = "custMain.html?username=" + encodeURIComponent(username);
+      };
+    });
+  </script>
 </head>
 
 <body>
@@ -29,14 +51,12 @@
       <div class="card">
         <h2>Welcome Back 👋</h2>
 
-        <input type="text" placeholder="Mobile / Email">
-        <input type="password" placeholder="Password">
+        <input type="text" id="username" placeholder="Mobile / Email">
+        <input type="password" id="password" placeholder="Password">
 
         <div class="forgot">Forgot Password?</div>
 
-        <a href="custMain.html">
-          <button class="btn">Login</button>
-        </a>
+        <button id="custLoginButton" class="btn">Login</button>
 
         <div class="sign-up">
           Customer? <a href="custSignUp.html">Create account</a>
@@ -48,4 +68,5 @@
   </div>
 
 </body>
+
 </html>

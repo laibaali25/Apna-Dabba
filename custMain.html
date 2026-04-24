@@ -43,7 +43,7 @@
 <!-- HERO -->
 <section id="mainContent">
   <div id="mainHead">
-    <h1 class="h1cont">Apna Dabba</h1>
+    <h1 class="h1cont" id ="welcomeText">Apna Dabba</h1>
     <h2>Find the best Tiffins near you</h2>
   </div>
 </section>
@@ -178,6 +178,12 @@
   </div>
 
 </footer>
+
+<script> 
+  const params = new URLSearchParams(window.location.search); 
+  const username = params.get("username"); 
+  document.getElementById("welcomeText").innerText = "Welcome, " + username;
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
