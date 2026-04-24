@@ -2,18 +2,28 @@
 const dataRows = [
     {
       number: "INV001",
-      name:"Manno",
+      name:"Sana Ali",
       charges: "Rs.1400.00"
     },
     {
       number: "RCPT001",
-      name:"Riya",
+      name:"Mohammad Arsh Qureshi",
       charges: "Rs.1450.00"
     },
   {
     number: "RWPT001",
-    name:"Khushi", 
+    name:"Bubu-Billu", 
     charges: "Rs.1600.00"
+  },
+  {
+    number: "RFWT001",
+    name:"Bubu Ali", 
+    charges: "Rs.1600.00"
+  },
+  {
+    number: "RWFT001",
+    name:"Billu Qureshi", 
+    charges: "Rs.1800.00"
   }
     // Add more data rows here...
   ];

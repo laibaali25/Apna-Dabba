@@ -3,205 +3,119 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="vendTodaysOrd.css" rel="stylesheet" type="text/css" />
-  <title>Today's Order</title>
 
+  <title>Subscriptions</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="vendTodaysOrd.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
 
+    <a class="navbar-brand" href="#">APNA DABBA</a>
 
-  <!--------------------Nav Bar ------------------------------------->
-
-  <nav id="navb" class="navbar navbar-expand-lg navbar-light " style="background-color:#d78d8d7a;">
-
-
-    <a class="navbar-brand" style="font-weight: 800;" href="#">Apna College</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      ☰
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="nav">
 
-        <li class="nav-item active">
-          <a class="nav-link" href="vendMain.html">Home <span class="sr-only">(current)</span></a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="vendMain.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="vendSubs.html">Subscriptions</a></li>
+        <li class="nav-item"><a class="nav-link" href="vendWallet.html">Wallet</a></li>
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Orders</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="vendTodaysOrd.html">Today's Order</a></li>
+            <li><a class="dropdown-item" href="vendDailyOrd.html">Daily Tiffin</a></li>
+          </ul>
         </li>
-        
-        <li class="nav-item active">
-          <a class="nav-link" href="vendSubs.html">Subscriptions <span class="sr-only">(current)</span></a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="vendWallet.html">Wallet <span class="sr-only">(current)</span></a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="choose.html">Login<span class="sr-only">(current)</span></a>
-        </li>
-
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" href="vendTodaysOrd.html" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            My Orders
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-            <a class="dropdown-item" href="vendTodaysOrd.html">Today's Order</a>
-            <a class="dropdown-item" href="vendDailyOrd.html">Daily Tiffin</a>
-
-          </div>
-        </li>
-
-
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search food, tiffin centre..."
-          aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+      <form class="d-flex ms-3">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-primary">Search</button>
       </form>
+
     </div>
-  </nav>
-
-  <!--------------------Nav Bar Ends------------------------------------->
-
+  </div>
+</nav>
 
 
-
-  <!-- Main Content ------>
-
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-    rel="stylesheet">
-  <!-- Fonts referenced in mdbootstrap, moved up to reduce page load time -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Material Design Bootstrap -->
-  <link rel="stylesheet"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/mdb.min.css?version=0707050300507050503"
-    type='text/css' />
-  <link rel="stylesheet"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/storefront.css?version=0707050300507050503"
-    type='text/css' />
-  <link rel="stylesheet"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/autocomplete.css?version=0707050300507050503" />
-  <link rel="stylesheet" type="text/css" href="../css/ps/theme.css?version=0707050300507050503">
+<!-- HERO -->
+<section id="mainContent">
+  <div id="mainHead">
+    <h1 class="h1cont">Today's Orders</h1>
+    <p>Manage your tiffin customers efficiently</p>
+  </div>
+</section>
 
 
-  <link href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<!-- TABLE -->
+<div class="container my-5">
 
-  <link href="//cdn.datatables.net/plug-ins/1.10.19/integration/font-awesome/dataTables.fontAwesome.css"
-    rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://gensuiteqa.genalphacatalog.com/gensuite/css/ps/orderhistory.css?version=0707050300507050503" />
-
-  <div class="table-responsive pb-5">
-
-
-    <div id="headOrd">
-      <h1>Today's Order Details</h1>
-    </div>
-
-    <table id="tbOrderHistory" class="table border ps-table w-100 mb-3">
+  <div class="table-card">
+    <table class="table align-middle">
       <thead>
         <tr>
-
-          <th class="font-weight-bold py-2 border-0 quantity">Id</th>
-          <th class="font-weight-bold py-2 border-0 ">Name</th>
-          <th class="font-weight-bold py-2 border-0 ">Tiffin</th>
-          <th class="font-weight-bold py-2 border-0 ">Tiffin Charges</th>
-
+          <th>Id</th>
+          <th>Name</th>
+          <th>Tiffin Charges</th>
         </tr>
       </thead>
+
       <tbody>
+        <!-- JS DATA -->
       </tbody>
+
     </table>
   </div>
-  <!-- Main Content ends------>
+
+</div>
 
 
+<!-- FOOTER -->
+<footer class="footer">
 
-  <!----------------------- Footer  ----------------------------------->
-  <footer class="footer-distributed">
+  <div class="footer-container">
 
-    <div class="footer-left">
-
-      <h3>
-        <img src="APNA DABBA logo smal.png" alt="Company Logo" width="130px">
-      </h3>
-
-      <p class="footer-links">
-        <a href="index.html" class="link-1">Home</a>
-
-        <a href="#">Blog</a>
-
-
-        <a href="#">About</a>
-
-
-
-        <a href="#">Contact</a>
-      </p>
-
-      <p class="footer-company-name">Apna Dabba © 2024</p>
+    <div>
+      <img src="APNA DABBA logo smal.png" class="footer-logo">
+      <p>Fresh homemade meals delivered daily.</p>
+      <p>© 2024 Apna Dabba</p>
     </div>
 
-    <div class="footer-center">
-
-      <div class="footer-icons">
-
-        <a class="fb" href="#"><i class="fa fa-facebook"> </i></a>
-        <a class="twit" href="#"><i class="fa fa-twitter"></i></a>
-        <a class="ld" href="#"> <i class="fa fa-linkedin"> </i></a>
-        <a class="git" href="#"><i class="fa fa-github"></i></a>
-
-      </div>
-
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:support@company.com">support@apnadabba.com</a></p>
-      </div>
-
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><br>
+      <a href="#">Blog</a><br>
+      <a href="#">About</a><br>
+      <a href="#">Contact</a>
     </div>
 
-
-    <div class="footer-right">
-
-      <p class="footer-company-about">
-        <span>About the company</span>
-
-        Apna Dabba is an innovative website serving as a centralized hub for tiffin services, fostering
-        seamless connections between discerning customers and local vendors.
-      </p>
-
-
-
+    <div>
+      <h4>About</h4>
+      <p>We connect customers with trusted local tiffin providers.</p>
     </div>
 
-  </footer>
+  </div>
 
-  <!----------------------- Footer Ends ----------------------------------->
+</footer>
 
+<script src="vendSubs.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-  <script src="venderTodaysOrd.js"></script>
 </body>
-
 </html>
