@@ -87,6 +87,7 @@ tbody tr:hover {
 }
 
 /* FOOTER */
+/* FOOTER */
 .footer {
   background: linear-gradient(135deg, #ff9966, #ff5a5f);
   color: white;
@@ -103,18 +104,23 @@ tbody tr:hover {
 
 .footer-logo {
   width: 120px;
-  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 .footer a {
-  color: white;
+  color: white !important;
   text-decoration: none;
-  display: block;
-  margin-top: 5px;
 }
 
 .footer a:hover {
   text-decoration: underline;
+  color: white !important;
 }
 
 /* RESPONSIVE */
@@ -135,3 +141,4 @@ tbody tr:hover {
 .dropdown-toggle:hover{
   cursor: pointer;
 }
+

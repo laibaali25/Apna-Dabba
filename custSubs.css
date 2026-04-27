@@ -18,7 +18,8 @@ body {
 }
 
 .navbar-brand {
-  font-weight: 700;
+  font-weight: 750;
+  font-size: 24px;
   color: #ff5a5f !important;
 }
 
@@ -161,37 +162,38 @@ body {
 
 /* FOOTER */
 .footer {
-  background: #111827;
-  color: #ccc;
-  padding: 30px;
-  margin-top: 40px;
+  background: linear-gradient(135deg, #ff9966, #ff5a5f);
+  color: white;
+  padding: 40px 20px;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
   margin: auto;
 }
 
-.footer-col {
-  display: flex;
-  flex-direction: column;
+.footer-logo {
+  width: 120px;
 }
 
-.footer-col h4 {
-  color: white;
-  margin-bottom: 10px;
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
-.footer-col a {
-  color: #aaa;
+.footer a {
+  color: white !important;
   text-decoration: none;
-  margin-top: 5px;
 }
 
-.footer-col a:hover {
-  color: white;
+.footer a:hover {
+  text-decoration: underline;
+  color: white !important;
 }
 
 /* RESPONSIVE */

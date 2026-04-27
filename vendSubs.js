@@ -12,17 +12,17 @@ const dataRows = [
     },
   {
     number: "RWPT001",
-    name:"Bubu-Billu", 
+    name:"Billu", 
     charges: "Rs.1600.00"
   },
   {
     number: "RFWT001",
-    name:"Bubu Ali", 
+    name:"Golu", 
     charges: "Rs.1600.00"
   },
   {
     number: "RWFT001",
-    name:"Billu Qureshi", 
+    name:"Bubu", 
     charges: "Rs.1800.00"
   }
     // Add more data rows here...

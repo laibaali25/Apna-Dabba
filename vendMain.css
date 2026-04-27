@@ -126,3 +126,6 @@ a {
   color: white;
   margin-left: 3px;
 }
+.dropdown-toggle:hover{
+  cursor: pointer;
+}
